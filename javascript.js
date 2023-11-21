@@ -18,7 +18,7 @@ function readySetGo(playerChoice,computerChoice){
         return("You Won, rock beats Scissor")
     }else if(playerChoice == "Rock" && computerChoice =="Rock"){
         return("You tied, Rock ties Rock")
-        
+
 }if (playerChoice == "Paper" && computerChoice =="Paper"){
     return("You tied, paper can't beat paper")
 }else if(playerChoice == "Paper" && computerChoice =="Scissor"){
@@ -27,6 +27,13 @@ function readySetGo(playerChoice,computerChoice){
   return("You Won, paper beats rock")
 }
 
+if (playerChoice == "Scissors" && computerChoice =="Paper"){
+    return("You lost, Paper beats rock")
+}else if(playerChoice == "Scissor" && computerChoice =="Scissor"){
+  return("You tied, scissor can't beat scissor")
+}else if(playerChoice == "Scissors" && computerChoice =="Rock"){
+  return("You lost, Rock beats scissor")
+}
 
 
 
