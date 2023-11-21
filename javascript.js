@@ -13,7 +13,7 @@ function getComputerChoice(){
 
 function readySetGo(playerChoice,computerChoice){
     if (playerChoice == "Rock" && computerChoice =="Paper"){
-          return("You lost, Paper beats rock")
+          return("You lost, paper beats rock")
     }else if(playerChoice == "Rock" && computerChoice =="Scissors"){
          return("You Won, rock beats Scissor")
     }else if(playerChoice == "Rock" && computerChoice =="Rock"){
@@ -34,7 +34,15 @@ function readySetGo(playerChoice,computerChoice){
     }else if(playerChoice == "Scissors" && computerChoice =="Scissors"){
          return("You tied, scissor can't beat scissor")
     }else if(playerChoice == "Scissors" && computerChoice =="Rock"){
-        return("You lost, Rock beats scissor")
+        return("You lost, rock beats scissors")
     }
+}
+function game(){
+     let you = 0;
+     let comp =0;
+     for (let i = 0;i < 5;i++){
+
+     }
+
 }
 
