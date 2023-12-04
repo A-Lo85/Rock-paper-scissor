@@ -40,8 +40,16 @@ function readySetGo(playerChoice,computerChoice){
 function game(){
      
           readySetGo("Rock",getComputerChoice());
-     
-     
+          
+
 
 }
+const body = document.body;   
+
+const div= document.createElement('div');
+div.setAttribute('id', 'theDiv'); 
+body.append(div);
+
+
+
 
