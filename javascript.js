@@ -50,6 +50,12 @@ const div= document.createElement('div');
 div.setAttribute('id', 'theDiv'); 
 body.append(div);
 
+const theDiv = document.querySelector('#theDiv');
+const btn1 = document.createElement('button')
 
+
+const btn2 = document.createElement('button')
+
+const btn3 = document.createElement('button')
 
 
