@@ -54,7 +54,7 @@ function readySetGo(playerChoice,computerChoice){
 function counter(){
     document.getElementById('Res').innerHTML = (readySetGo('Rock',getComputerChoice()));
  if(p==5 ){
-     return (document.getElementById('Rer').innerHTML ="You've won!")
+     return (document.getElementById('Res').innerHTML ="You've won!")
  }else if(c == 5){
  return(document.getElementById('Res').innerHTML = "The computer won!")
  }else if(won == true){
@@ -86,7 +86,6 @@ const theDiv = document.querySelector('#theDiv');
 const rock = document.createElement('button');
 rock.innerText='Rock'
 rock.setAttribute('id', 'Rock');
-
 rock.addEventListener('click', function(){
  counter();
  });
@@ -95,11 +94,17 @@ theDiv.append(rock);
 const paper = document.createElement('button');
 paper.innerText = 'Paper';
 paper.setAttribute('id','Paper');
+paper.addEventListener('click',function(){
+    counter();
+});
 theDiv.append(paper);
 
 const scissors = document.createElement('button')
 scissors.innerText = 'Scissors';
 scissors.setAttribute ('id', 'Scissors');
+scissors.addEventListener('click',function(){
+    counter();
+});
 theDiv.append(scissors);
 
 
