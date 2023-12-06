@@ -9,19 +9,22 @@ function getComputerChoice(){
         return("Scissors");
     }
 }
-let won ='';
+let won = null;
 let c = 0;
 let p = 0;
 
 function readySetGo(playerChoice,computerChoice){
     if (playerChoice == "Rock" && computerChoice =="Paper"){
-          let won = false;
+           won = false;
      return("You lost, paper beats rock")
     }else if(playerChoice == "Rock" && computerChoice =="Scissors"){
-     let won = true;
+      won = true;
+      
          return("You Won, rock beats Scissor")
     }else if(playerChoice == "Rock" && computerChoice =="Rock"){
-         return("You tied, Rock ties Rock") 
+         won =null;
+        return("You tied, Rock ties Rock") 
+       
     }
     
     
@@ -64,10 +67,10 @@ rock.addEventListener('click', function(){
  document.getElementById('Res').innerHTML = (readySetGo('Rock',getComputerChoice()));
  if(won == true){
      p++;
-     document.getElementById('Per').innerHTML =p;
+     document.getElementById('Per').innerHTML ="Your score: " + p;
  }else if( won == false){
      c++;
-     document.getElementById('Com').innerHTML =c;
+     document.getElementById('Com').innerHTML = "Computer's score: " + c;
  }
 
 });
