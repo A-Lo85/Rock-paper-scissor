@@ -80,7 +80,7 @@ theDiv.append(paper);
 
 const scissors = document.createElement('button')
 scissors.innerText = 'Scissors';
-scissors.setAttribute = ('id','Scissors');
+scissors.setAttribute ('id', 'Scissors');
 theDiv.append(scissors);
 
 
@@ -92,6 +92,10 @@ theDiv.append(res)
 const per = document.createElement('div');
 per.setAttribute('id','Per');
 theDiv.append(per);
+
+const com = document.createElement('div');
+com.setAttribute('id','Com');
+theDiv.append(com);
 
 
 
