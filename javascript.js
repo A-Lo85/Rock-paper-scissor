@@ -37,13 +37,7 @@ function readySetGo(playerChoice,computerChoice){
         return("You lost, rock beats scissors")
     }
 }
-function game(){
-     
-          readySetGo("Rock",getComputerChoice());
-          
 
-
-}
 const body = document.body;   
 
 const div= document.createElement('div');
@@ -55,15 +49,32 @@ const theDiv = document.querySelector('#theDiv');
 const rock = document.createElement('button');
 rock.innerText='Rock'
 rock.setAttribute('id', 'Rock');
+
+rock.addEventListener('click', function(){
+ 
+ document.getElementById('Res').innerHTML = (readySetGo('Rock',getComputerChoice()));
+});
 theDiv.append(rock);
 
 const paper = document.createElement('button');
 paper.innerText = 'Paper';
 paper.setAttribute('id', 'Paper');
+paper.addEventListener('click', function(){
+ 
+     document.getElementById('Res').innerHTML = (readySetGo('Paper',getComputerChoice()));
+    });
 theDiv.append(paper);
 
 const scissors = document.createElement('button')
 scissors.innerText = 'Scissors';
 scissors.setAttribute = ('id', 'Scissor')
+scissors.addEventListener('click', function(){
+ 
+     document.getElementById('Res').innerHTML = (readySetGo('Scissors',getComputerChoice()));
+    });
 theDiv.append(scissors);
+
+const res = document.createElement('div');
+res.setAttribute('id','Res');
+theDiv.append(res)
 
