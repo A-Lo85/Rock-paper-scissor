@@ -51,11 +51,19 @@ div.setAttribute('id', 'theDiv');
 body.append(div);
 
 const theDiv = document.querySelector('#theDiv');
-const btn1 = document.createElement('button')
 
+const rock = document.createElement('button');
+rock.innerText='Rock'
+rock.setAttribute('id', 'Rock');
+theDiv.append(rock);
 
-const btn2 = document.createElement('button')
+const paper = document.createElement('button');
+paper.innerText = 'Paper';
+paper.setAttribute('id', 'Paper');
+theDiv.append(paper);
 
-const btn3 = document.createElement('button')
-
+const scissors = document.createElement('button')
+scissors.innerText = 'Scissors';
+scissors.setAttribute = ('id', 'Scissor')
+theDiv.append(scissors);
 
