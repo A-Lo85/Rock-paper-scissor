@@ -50,6 +50,31 @@ function readySetGo(playerChoice,computerChoice){
     }
 }
 
+
+function counter(){
+    document.getElementById('Res').innerHTML = (readySetGo('Rock',getComputerChoice()));
+ if(p==5 ){
+     return (document.getElementById('Rer').innerHTML ="You've won!")
+ }else if(c == 5){
+ return(document.getElementById('Res').innerHTML = "The computer won!")
+ }else if(won == true){
+    p++;
+    document.getElementById('Per').innerHTML ="Your score: " + p;
+ }else if( won == false){
+     c++;
+     document.getElementById('Com').innerHTML = "Computer's score: " + c;
+ }
+};
+
+
+
+
+
+
+
+
+
+
 const body = document.body;   
 
 const div= document.createElement('div');
@@ -63,17 +88,8 @@ rock.innerText='Rock'
 rock.setAttribute('id', 'Rock');
 
 rock.addEventListener('click', function(){
- 
- document.getElementById('Res').innerHTML = (readySetGo('Rock',getComputerChoice()));
- if(won == true){
-     p++;
-     document.getElementById('Per').innerHTML ="Your score: " + p;
- }else if( won == false){
-     c++;
-     document.getElementById('Com').innerHTML = "Computer's score: " + c;
- }
-
-});
+ counter();
+ });
 theDiv.append(rock);
 
 const paper = document.createElement('button');
